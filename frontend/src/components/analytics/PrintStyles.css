@@ -1,0 +1,55 @@
+@media print {
+  @page {
+    size: A4;
+    margin: 18mm 14mm;
+  }
+
+  body {
+    background: #fff !important;
+  }
+
+  .report-actions,
+  .back-btn,
+  .report-toolbar,
+  .progress-card {
+    display: none !important;
+  }
+
+  .report-shell {
+    height: auto !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+
+  .report-content {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .nlp-card,
+  .sql-card,
+  .exec-card,
+  .metrics-section,
+  .recs-section,
+  .question-section,
+  .footer-card {
+    page-break-inside: avoid;
+    box-shadow: none !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  .nlp-card,
+  .sql-card {
+    margin-bottom: 12px;
+  }
+
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+  }
+
+  /* echarts canvases print darker without this */
+  canvas {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
